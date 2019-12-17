@@ -27,8 +27,20 @@ var car = {
 console.log(car.year);
 
 car.mileage = 5600;
-console.log(car.mileage);
+console.log(car.year);
+console.log(car["mileage"]);
+
+// car.start();
+// car.stop();
+// car.stop();
 
 car.start();
-car.stop();
-car.stop();
+car.start();
+
+for(prop in car) {
+    console.log(prop + " = " + car[prop]);
+}
+// for(proprietate in car) {
+//     console.log(proprietate);
+// }  -------- AFISEAZA TOATE PROPRIETATILE ---------
+
