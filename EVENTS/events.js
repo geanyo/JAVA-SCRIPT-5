@@ -1,8 +1,21 @@
 var button= document.querySelector("input");
+var element= document.getElementById("time");
 
-var showTime= function() {
-    var datte= Date();
-    document.getElementById("time").innerText("<date>");
+function showTime() {
+    // var date= Date();
+    element.innerText= Date();
 }
+function changeStyle() {
+    // element.style.color= "red";
+    element.className= "newStyle";
+}
+// showTime();
+// button.onclick= showTime;
+// button.onclick= changeStyle;
 
-button.onclick= showTime;
+button.addEventListener("click", showTime);
+button.addEventListener("click", changeStyle);
+
+
+// button.removeEventListener("click", changeStyle);
+
