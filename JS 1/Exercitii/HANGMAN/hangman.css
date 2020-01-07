@@ -1,5 +1,15 @@
 * {
     box-sizing: border-box;
-    margin: 0em;
     padding: 0em;
+    margin: 0em;
+}
+body {
+    font-family: monospace;
+    font-size: 1.2em;
+}
+#drawing {
+    position: relative;
+    background-color: lightgray;
+    height: 10em;
+    width: 10em;
 }
