@@ -35,10 +35,26 @@ document.querySelectorAll('li')
 
 var active= [];
 function onClick(event) {
-    if (active.length ==0) {
+    if (active.length == 0) {
         active.push(event.target);
         event.target.querySelector('img').style.visibility= "visible";
+        event.target.removeEventListener('click', onClick);
+    } else if (active.length == 1) {
+        active.push(event.target);
+        event.target.querySelector('img').style.visibility= "visible";
+        event.target.removeEventListener('click', onClick);
+        if (active[0].querySelector('img').src == active[1].querySelector('img').src) {
+            active = [];
+        } else {
+            setTimeout(hide, 1000);
+        }  
     }
 }
 
-
+function hide() {
+    active[0].querySelector('img').style.visibility= "hidden";
+    active[1].querySelector('img').style.visibility= "hidden";
+    active[0].addEventListener('click', onClick);
+    active[1].addEventListener('click', onClick);
+    active= [];
+}
