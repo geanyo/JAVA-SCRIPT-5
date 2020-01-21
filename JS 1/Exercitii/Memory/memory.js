@@ -27,4 +27,18 @@ for(i= 0; i < images.length; i++) {
     let html= `<li><img src="${images[i]}"></li>`;
     content += html;
 }
+
 document.querySelector('ul').innerHTML= content;
+
+document.querySelectorAll('li')
+        .forEach(e => e.addEventListener('click', onClick));
+
+var active= [];
+function onClick(event) {
+    if (active.length ==0) {
+        active.push(event.target);
+        event.target.querySelector('img').style.visibility= "visible";
+    }
+}
+
+
