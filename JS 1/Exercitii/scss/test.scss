@@ -1,7 +1,23 @@
-$color: orange;
+@import 'var';
+
+$color: crimson;
 
 button {
     background-color: $color;
+}
+
+nav {
+    ul {
+        background-color: yellow;
+        li {
+            display: inline-block
+        }
+        a {
+            text-decoration: none;
+            color: $secondary_color;
+            padding: $default_padding * 2;
+        }
+    }
 }
 
 h1 {

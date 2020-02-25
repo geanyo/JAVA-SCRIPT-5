@@ -1,5 +1,14 @@
 button {
-  background-color: orange; }
+  background-color: crimson; }
+
+nav ul {
+  background-color: yellow; }
+  nav ul li {
+    display: inline-block; }
+  nav ul a {
+    text-decoration: none;
+    color: blue;
+    padding: 20px; }
 
 h1 {
-  color: orange; }
+  color: crimson; }
