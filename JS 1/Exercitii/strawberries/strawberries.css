@@ -51,3 +51,17 @@ li:first-child {
     top: 0;
     
 }
+h1 {
+    color: rgb(110, 177, 84);
+    font-size: 5em;
+}
+p {
+    color: white;
+    line-height: 1.5em;
+}
+button {
+    padding: 0.5em;
+    background-color: rgb(110, 177, 84);
+    color: white;
+    border-radius: 0.2em;
+}
