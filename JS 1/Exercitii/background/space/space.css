@@ -28,6 +28,7 @@ body {
 @keyframes warp {
     /* from {} */
     to {
-        background-position: 30% 20%, center, -100vw center; 
+        /* background-position: 30% 20%, center, -1024px center;  -1024 SAU MULTIPLU DE DIMENSIUNEA TILE-ULUI*/ 
+        background-position: 30% 20%, center, -1024px center; 
     }
 }
