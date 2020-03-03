@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("rocket.png"), url("earth.png"), url("space.jpg");
+    background-size: auto, 20%, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 30% 20%, center, center;
+    height: 100vh;
+}
