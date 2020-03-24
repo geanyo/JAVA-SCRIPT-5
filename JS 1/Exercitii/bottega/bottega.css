@@ -5,7 +5,82 @@
     padding: 0;
     margin: 0;
 }
-main {
+.welcome, .portfolio {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.welcome {
+    z-index: 1;
+    background-color: black;
+    background-image: url('1.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio {
+    z-index: 0;
+}
+.title {
+    margin-top: 1em;
+    font-family: Libre Baskerville, sans-serif;
+    font-size: 9em;
+    font-weight: 900;
+    color: white;
+}
+.enter {
+    font-family: sans-serif;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 1.5em;
+    position: relative;
+    cursor: pointer;
+}
+.enter::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: black;
+    /* transition-property: width; */
+    transition-duration: 0.3s;
+}
+.enter:hover::after {
+    width: 100%;
+    background-color: white;
+}
+@keyframes bounce {
+    from {
+        top: 0px;
+        color: white;
+    }
+    to {
+        top: -0.7em;
+        color: black;
+    }
+}
+.title span {
+    position: relative;
+}
+.title span.bounce {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+
+
+/* main {
     height: 100vh;
     width: 100vw;
     background-color: black;
@@ -28,4 +103,4 @@ main {
     font-size: 2em;
     text-align: center;
     margin-top: 1.5em;
-}
+} */
