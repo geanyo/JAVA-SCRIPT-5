@@ -59,7 +59,7 @@
     position: relative;
     cursor: pointer;
 }
-.enter::after {
+.enter::after, .back::after {
     content: '';
     display: block;
     position: absolute;
@@ -70,7 +70,7 @@
     /* transition-property: width; */
     transition-duration: 0.3s;
 }
-.enter:hover::after {
+.enter:hover::after, .back:hover::after {
     width: 100%;
     background-color: white;
 }
