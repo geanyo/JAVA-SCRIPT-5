@@ -24,7 +24,9 @@
     align-items: center;
     justify-content: center;
     /* opacity: 0; */
-    visibility: hidden;
+    /* visibility: hidden; */
+    transition-duration: 2s;
+    transition-property: left;
 }
 .portfolio {
     z-index: 0;
@@ -92,6 +94,12 @@
     animation-duration: 2s;
     animation-iteration-count: 2;
     animation-direction: alternate;
+}
+.slide-out {
+    left: 100vw;
+}
+.slide-in {
+    left: 0;
 }
 
 

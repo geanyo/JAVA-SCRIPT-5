@@ -15,13 +15,29 @@ function spanTitle() {
     });
     return spans;
 }
+function shuffle(array) {
+    array.sort( () => 0.5 - Math.random() );
+}
 
-let spans= spanTitle();
-spans.sort( function() {return 0.5 - Math.random()});
-let spansToAnimate= spans.slice(0, 6);
+let originalSpans= spanTitle();
+let oddOrEven= Math.round(Math.random());
+let spans= originalSpans.filter( (value, index) => index % 2==oddOrEven );
+shuffle(spans);
+// spans.sort( function() {return 0.5 - Math.random()} );
+let spansToAnimate= spans.slice(0, 5);
 spansToAnimate.forEach(span=> span.classList.add('bounce'));
 
+function slideOut() {
+    document.querySelector('.welcome').classList.add('slide-out');
+    document.querySelector('.welcome').classList.remove('slide-in');
+}
+function slideIn() {
+    document.querySelector('.welcome').classList.add('slide-in');
+    document.querySelector('.welcome').classList.remove('slide-out');
+}
 
+document.querySelector('.welcome').addEventListener('click', slideOut);
+document.querySelector('.back').addEventListener('click', slideIn);
 
 
 
