@@ -14,6 +14,11 @@ var app= new Vue({
             'very strong'
         ]
     },
+    computed: {
+        score()
+    },
+
+
     methods: {
         evaluateScore: function() {
             // definim noul scor initial egal cu 0
