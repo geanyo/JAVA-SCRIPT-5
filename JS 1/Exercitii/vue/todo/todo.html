@@ -16,9 +16,14 @@
                 {{ todo }}
             </li>
         </ul>
-        <div class="new task">
-            Task: <input type="text" v-model="task">
-            <div><button @click="saveItem">Save item</button></div>
+        <div class="new_task">
+            <div class="new_task_input"> 
+                Task:
+                <input type="text" v-model="task" @keyup.enter="saveItem">
+            </div>
+            <div class="save_task">
+                <button @click="saveItem">Save item</button>
+            </div>           
         </div>
     </div>
 </body>
