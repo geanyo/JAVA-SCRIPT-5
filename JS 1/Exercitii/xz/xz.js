@@ -37,5 +37,6 @@ var app= new Vue({
             ) {
                 this.finished= true;
             }
+        }
     }
 })
