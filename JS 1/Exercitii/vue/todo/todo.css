@@ -4,14 +4,13 @@
   box-sizing: border-box;
 }
 
-#app {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.todo-list {
+#app {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   padding: 2em;
@@ -72,7 +71,7 @@ input[type="text"] {
   width: 85%;
 }
 
-.todo-item {
+.task {
   display: flex;
   justify-content: space-between;
 }
@@ -82,8 +81,8 @@ input[type="text"] {
 }
 
 .controls div {
-  width: 1em;
   border-radius: 0.1em;
+  width: 1em;
   color: white;
   text-align: center;
   cursor: pointer;
@@ -92,19 +91,19 @@ input[type="text"] {
 }
 
 .check {
-  background: rgb(32, 178, 120);
+  background: rgb(32, 178, 115);
 }
 
-.remove {
-  background: rgb(235, 114, 114);
+.delete {
+  background: rgb(228, 107, 107);
 }
 
-.title.checked {
-  text-decoration: line-through;
+.task.done .title {
   color: #888;
+  text-decoration: line-through;
 }
 
-.options {
+.filters {
   text-align: right;
   margin-bottom: 0.5em;
 }
