@@ -12,8 +12,7 @@ Vue.component('todo-list', {
             <task
                 v-if="showDone || !todo.isDone" 
                 v-for="(todo, index) in todos"
-                :title="todo.title"
-                :is-done="todo.isDone"
+                :todo="todo"
                 @checked="checkTodo(index)"
                 @deleted="deleteTodo(index)">
             </task>
