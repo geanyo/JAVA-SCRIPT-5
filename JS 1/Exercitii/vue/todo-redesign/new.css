@@ -94,9 +94,9 @@
     background: rgb(32, 178, 115);
   }
   
-  .delete {
+  /* .delete {
     
-  }
+  } */
   
   .task.done .title {
     color: #888;
