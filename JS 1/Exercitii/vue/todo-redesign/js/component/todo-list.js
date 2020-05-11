@@ -1,9 +1,9 @@
-import { Todo } from '../class/todo.js';
+import { Todo } from '../class/Todo.js';
 
 Vue.component('todo-list', {
     template: `
     <div class="todo-list">
-        <h1>{{list_name}}</h1>
+        <h1>{{ list_name }}</h1>
         <div class="filters">
             <label>Show done:</label>
             <input type="checkbox" v-model="showDone">
@@ -12,18 +12,19 @@ Vue.component('todo-list', {
             <task
                 v-if="showDone || !todo.isDone" 
                 v-for="(todo, index) in todos"
-                :todo="todo"
+                :task="todo"
                 @checked="checkTodo(index)"
                 @deleted="deleteTodo(index)">
             </task>
         </ul>
         <div class="new_task">
-                Task:
-                <input type="text" v-model="task" @keyup.enter="saveTodo">
-            <div class="save_task"><button @click="saveTodo">Save item</button></div>
+                New:
+                <input type="text" class="task_input" v-model="task" @keyup.enter="saveTodo">
+            <div class="save_task"><button @click="saveTodo">+</button></div>
         </div>
     </div>
     `,
+    props: [ 'list_name' ],
     data() {
         return {
             todos: [
@@ -33,7 +34,6 @@ Vue.component('todo-list', {
             showDone: true
         }
     },
-    props: ['list_name'],
     methods: {
         saveTodo() {
             // adaugam valoarea din task in lista de todo
