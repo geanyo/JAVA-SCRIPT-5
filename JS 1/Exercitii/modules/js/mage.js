@@ -3,6 +3,7 @@ import { Hero } from "./hero.js";
 // ./ ------- DIRECTOR CURENT
 // ../ ------- DIRECTOR PARINTE
 
+// export default class Mage extends Hero { ------- cand sunt lucruri unice de exportat
 class Mage extends Hero {
     firePrimary() {
         this.mana -= 20;
@@ -21,3 +22,5 @@ class Mage extends Hero {
 }
 
 export { Mage }
+
+// sau export default Mage -------daca am doar un lucru de exportat si scapam de acolade

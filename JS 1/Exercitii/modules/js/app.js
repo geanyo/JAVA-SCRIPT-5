@@ -1,6 +1,7 @@
 // import "https://cdn.jsdelivr.net/npm/vue/dist/vue.js";
 import { Superman } from "./superman.js";
-import {  } from "./mage.js";
+import { Mage } from "./mage.js";
+// sau import mage -------- si scapam de acolade
 
 var clark= new Superman("Clark Kent", 1000, 1000);
 var xevras= new Mage("Xevras", 100, 300);
