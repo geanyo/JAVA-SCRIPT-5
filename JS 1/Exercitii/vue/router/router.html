@@ -16,7 +16,10 @@
            <router-link to="/account/Geanina">My Account</router-link>
            <router-link to="/products">Products</router-link>
        </p>
-       <router-view></router-view>
+       <transition name="fade" mode="out-in">
+        <!-- <transition name="bounce" mode="out-in"> -->
+            <router-view></router-view>
+       </transition>
     </div>
 </body>
 </html>

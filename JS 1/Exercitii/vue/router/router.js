@@ -1,5 +1,5 @@
-// import "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"
-import "https://unpkg.com/vue/dist/vue.js"
+import "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"
+// import "https://unpkg.com/vue/dist/vue.js"
 import "https://unpkg.com/vue-router/dist/vue-router.js"
 
 // conventia in VUE este: NUMELE COMPONENTELOR SE SCRIU CU LITERE MARI, iar restul variabileleor sau alte constante se scriu cu litere mici
@@ -24,11 +24,18 @@ const Products = {
     `
 }
 
+const NotFound = {
+    template: `
+        <h1>Sorry, the route {{ $route.fullPath }} was not found.</h1>
+    `
+}
+
 const router = new VueRouter({
     routes: [
         { path: '/about', component: About },
         { path: '/account/:username', component: MyAccount, props: true },
-        { path: '/products', component: Products }
+        { path: '/products', component: Products },
+        { path: '*', component: NotFound }
     ]
 })
 // path: '/products', component: Products -------- DEFINIREA RUTELOR -------- CALE ----- COMPONENTA
