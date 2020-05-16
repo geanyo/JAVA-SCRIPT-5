@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Router Example</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script type="module" src="router.js"></script>
+    <link rel="stylesheet" href="router.css">
+</head>
+<body>
+    <div id="app">
+       <h1>Hello</h1>
+       <p>
+           <router-link to="/about">About</router-link>
+           <router-link to="/account/Geanina">My Account</router-link>
+           <router-link to="/products">Products</router-link>
+       </p>
+       <router-view></router-view>
+    </div>
+</body>
+</html>

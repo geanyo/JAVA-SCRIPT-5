@@ -1,0 +1,10 @@
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+/* router-ul seteaza pe ruta activa clasa router-link-active */
+a.router-link-active {
+    color: orangered;
+    font-weight: bold;
+}
