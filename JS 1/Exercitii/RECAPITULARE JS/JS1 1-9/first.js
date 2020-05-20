@@ -9,7 +9,7 @@ var nothing = null;
 var date = new Date();
 var hour = date.getHours();
 
-if(hour >= 21 && hour <= 6) {
+if(hour >= 21 || hour <= 6) {
     alert("Noapte buna!");
     alert("Somn usor!");
 } else if(hour <= 11) {
