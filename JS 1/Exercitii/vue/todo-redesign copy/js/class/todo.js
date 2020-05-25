@@ -1,4 +1,4 @@
-export default class Todo {
+class Todo {
     constructor(title) {
         this.title = title;
         this.isDone = false;
@@ -8,3 +8,5 @@ export default class Todo {
         this.isDone = !this.isDone;
     }
 }
+
+export { Todo }
