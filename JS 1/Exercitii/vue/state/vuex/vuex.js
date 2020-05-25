@@ -39,10 +39,17 @@ const PlusTenButton = {
     }
 }
 
+const MinusTenButton = {
+    template: `<button @click='decrement'>- 10</button>`,
+    methods: {
+        decrement: () => store.commit('decrement', 10)
+    }
+}
+
 new Vue({
     el: `#app`,
     store,
-    components: {PlusButton, PlusTenButton, MinusButton},
+    components: {PlusButton, PlusTenButton, MinusButton, MinusTenButton},
     template: `
         <div>
             <p>{{count}}</p>
@@ -50,6 +57,7 @@ new Vue({
                 <plus-button></plus-button>
                 <minus-button></minus-button>
                 <plus-ten-button></plus-ten-button>
+                <minus-ten-button></minus-ten-button>
             </p>
         </div>
     `,
