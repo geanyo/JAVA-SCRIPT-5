@@ -122,5 +122,6 @@ new Vue({
 //         increment: () => store.commit('increment'),
 //         decrement: () => store.commit('decrement')
 //     }
+// GETTERS ----- PROPRIETATI CALCULATE
 
 
