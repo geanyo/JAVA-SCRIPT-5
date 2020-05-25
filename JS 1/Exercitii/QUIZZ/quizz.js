@@ -84,8 +84,8 @@ new Vuex.Store({
         answerQuestion: (state, answer) => state.quiz.answerQuestion(answer)
     },
     getters: {
-        currentQuestionAnswers: (state) => state.quizz.question[state.quizz.activeQuestion].answers,
-        isQuizFinished: (state) => state.quizz.finished,
+        currentQuestionAnswers: (state) => state.quizz.question[state.quiz.activeQuestion].answers,
+        isQuizFinished: (state) => state.quiz.finished,
         quizScore: (state) => state.calculateScore()
     }
 });
