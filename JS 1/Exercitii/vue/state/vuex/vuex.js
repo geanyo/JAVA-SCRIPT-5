@@ -7,14 +7,16 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         increments: 0,
-        decrements: 0
+        decrements: 0,
+        mesage: 'Hello Vuex!'
     },
     getters: {
         count: state => state.increments - state.decrements
     },
     mutations: {
         increment: (state, n) => state.increments += n,
-        decrement: (state, n) => state.decrements += n
+        decrement: (state, n) => state.decrements += n,
+        updateMessage: (state, newMessage) => state.message = newMessage
     }
 })
 
@@ -24,6 +26,7 @@ const PlusButton = {
         increment: () => store.commit('increment', 1)
     }
 }
+        // ------     () =>    ------ METODA CARE NU PRIMESTE NICIUN PARAMETRU
 
 const MinusButton = {
     template: `<button @click='decrement'>-</button>`,
@@ -46,10 +49,20 @@ const MinusTenButton = {
     }
 }
 
+const MyInput = {
+    template: `<input type="text" :value="message" @input="updateMessage"></input>`,
+    methods: {
+        updateMessage: (event) => store.commit('updateMessage', event.target.value)
+    },
+    computed: {
+        message: () => store.state.mesage
+    }
+}
+
 new Vue({
     el: `#app`,
     store,
-    components: {PlusButton, PlusTenButton, MinusButton, MinusTenButton},
+    components: {PlusButton, PlusTenButton, MinusButton, MinusTenButton, MyInput},
     template: `
         <div>
             <p>{{count}}</p>
@@ -58,6 +71,7 @@ new Vue({
                 <minus-button></minus-button>
                 <plus-ten-button></plus-ten-button>
                 <minus-ten-button></minus-ten-button>
+                <my-input></my-input>
             </p>
         </div>
     `,
@@ -117,7 +131,7 @@ new Vue({
 
 
 //     methods: {
-// //      ------     () =>    ------ NU PRIMIM NICIUN ARGUMENT, parametru zero
+// //      ------     () =>    ------ METODA CARE NU PRIMESTE NICIUN PARAMETRU
 // // mai jos facem commit pe doua mutatii
 //         increment: () => store.commit('increment'),
 //         decrement: () => store.commit('decrement')
