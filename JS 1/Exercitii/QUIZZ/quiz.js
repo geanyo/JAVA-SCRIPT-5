@@ -81,7 +81,6 @@ class Quiz {
     }
 }
 
-
 // un alt lucru interesant, sa fie mai multe quiz uri si tu sa ai posibilitatea sa alegi ce quiz sa faci
 // + sa salvsm scorul acelui quiz   ---- pt Q1 - ai obtinut 2 din 4 puncte, pt Q2 - ai obtinut 2 din 4 puncte etc. Un fel de scoreBoard pentru toate quiz-urile.
 const store = new Vuex.Store({
