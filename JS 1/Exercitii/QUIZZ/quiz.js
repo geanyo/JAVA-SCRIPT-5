@@ -28,7 +28,9 @@ class Question {
         }
         return 0;
     }
-    isSelectedAnswer(answer) {
+        // IN CAZUL RASPUNSULUI MULTIPLU DE MAI JOS, daca s-a gasit un singur raspuns corect si erau mai multe, se va calcula 1 punct impartit la numarul de raspunsuri corecte
+    
+        isSelectedAnswer(answer) {
         return this.answer == answer
     }
     shuffleAnswers() {
@@ -79,6 +81,9 @@ class Quiz {
     }
 }
 
+
+// un alt lucru interesant, sa fie mai multe quiz uri si tu sa ai posibilitatea sa alegi ce quiz sa faci
+// + sa salvsm scorul acelui quiz   ---- pt Q1 - ai obtinut 2 din 4 puncte, pt Q2 - ai obtinut 2 din 4 puncte etc. Un fel de scoreBoard pentru toate quiz-urile.
 const store = new Vuex.Store({
     state: {
         quiz: new Quiz(
@@ -92,6 +97,7 @@ const store = new Vuex.Store({
                         new Answer(4, '5 litri')
                     ],
                     3
+                    // [1, 3]  ------ EXISTA POSIBILITATEA SA FIE MAI MULTE RASPUNSURI CORECTE. in acest caz, va fi un array
                 ),
                 new Question(
                     'Cum se poate modifica starea din Vuex?',
