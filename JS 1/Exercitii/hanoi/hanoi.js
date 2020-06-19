@@ -25,21 +25,28 @@ class Rod {
         }
     }
     put(disk) {
-        if (this.canPutDisk()) {
-            this.disks.push(disk)
-        } else {
-        throw new Error('Cannot put disk')
+        if (!this.canPutDisk(disk)) {
+            throw new Error('Cannot put disk')
         }
+        this.disks.push(disk)
     }
     canPutDisk(disk) {
         return this.isEmpty()
         || this.topDisk().biggerThan(disk)
     }
     pop() {
-        if (!this.isEmpty()) {
+        if (this.isEmpty()) {
+            throw new Error('Rod is empty')
+        } 
         return this.disks.pop()
-        } else {
-        new Error('Rod is empty')
         }
     }
-}
+
+
+    // pop() {
+    //     if (!this.isEmpty()) {
+    //     return this.disks.pop()
+    //     } else {
+    //     new Error('Rod is empty')
+    //     }
+    // }
