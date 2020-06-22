@@ -25,9 +25,7 @@ class Rod {
         }
     }
     put(disk) {
-        if (!this.canPutDisk(disk)) {
-            throw new Error('Cannot put disk')
-        }
+        if (!this.canPutDisk(disk)) throw new Error('Cannot put disk')
         this.disks.push(disk)
     }
     canPutDisk(disk) {
@@ -35,9 +33,7 @@ class Rod {
         || this.topDisk().biggerThan(disk)
     }
     pop() {
-        if (this.isEmpty()) {
-            throw new Error('Rod is empty')
-        } 
+        if (this.isEmpty()) throw new Error('Rod is empty')
         return this.disks.pop()
         }
     }
