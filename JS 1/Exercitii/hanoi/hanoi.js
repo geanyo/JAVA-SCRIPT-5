@@ -36,13 +36,30 @@ class Rod {
         if (this.isEmpty()) throw new Error('Rod is empty')
         return this.disks.pop()
         }
+        isEmpty() {
+            // return this.disks == [] sau
+            return this.disks.length == 0
+        }
+        topDisk() {
+            return this.disks[this.disks.length - 1]
+        }
     }
 
-
-    // pop() {
-    //     if (!this.isEmpty()) {
-    //     return this.disks.pop()
-    //     } else {
-    //     new Error('Rod is empty')
-    //     }
-    // }
+    class Game {
+        constructor(numberOfDisks) {
+            this.rods = {
+                A: new Rod('A', numberOfDisks, numberOfDisks),
+                B: new Rod('B', 0, numberOfDisks),
+                C: new Rod('C', 0, numberOfDisks)
+            }
+        }
+        move(sourceRodId, targetRodId) {
+           let sourceRod  = this.rods(sourceRodId)
+           let targetRod = this.rods(targetRodId)
+           if (!targetRod.canPutDisk(sourceRod.topDisk())) {
+               throw new Error('Cannot put disk')
+           }
+           let disk = sourceRod.pop()
+           targetRod.put(disk)
+        }
+    }
