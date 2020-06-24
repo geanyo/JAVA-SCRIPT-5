@@ -1,9 +1,9 @@
-import 'http://unpkg.com/vue/dist/vue.js'
-import 'http://unpkg.com/vuex/dist/vuex.js'
+import "https://unpkg.com/vue/dist/vue.js"
+import "https://unpkg.com/vuex/dist/vuex.js"
 
 
 function randomColor() {
-    return '#' + Math.random().toString(16).substri(-6);
+    return '#' + Math.random().toString(16).substr(-6);
 }
 
 class Move {
@@ -28,7 +28,7 @@ class Rod {
         this.id = id
         this.size = size
         this.disks = []
-        createDisks(numberOfDisks)
+        this.createDisks(numberOfDisks)
     }
     createDisks(numberOfDisks) {
         for(let size=numberOfDisks; size>0; size--) {
@@ -77,7 +77,7 @@ class Rod {
 
 const store = new Vuex.Store({
         state: {
-            game: new game(4),
+            game: new Game(4),
         },
         mutations: {
             makeMove: (state, move) => state.game.makeMove(move)
@@ -94,7 +94,7 @@ const store = new Vuex.Store({
                     :key="disk.size"
                     class="disks"
                     :style="{ 
-                        height:diskHeight(1),
+                        height: diskHeight(1),
                         width: diskWidth(disk.size),
                         backgroundColor: disk.color
                     }"
@@ -119,3 +119,10 @@ const store = new Vuex.Store({
         },
         components: {rod}
     }
+
+    new Vue({
+        el: '#app',
+        store,
+        components: {rod, game},
+        template: `<game></game>`
+    })
