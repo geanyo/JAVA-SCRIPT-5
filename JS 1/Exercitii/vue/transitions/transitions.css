@@ -11,16 +11,16 @@
 /* @keyframes SE FOLOSESTE LA ANIMATII */
 
 .bounce-enter-active {
-    animation-name: bounce;
-    animation-duration: 2s;
+    animation-name: wobble;
+    animation-duration: 1s;
 }
 .bounce-leave-active {
-    animation-name: bounce;
-    animation-duration: 2s; 
+    animation-name: wobble;
+    animation-duration: 1s; 
     animation-direction: reverse;   
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
     0% {
         transform: scale(0);
     }
@@ -30,5 +30,5 @@
     100% {
         transform: scale(1);
     }
-}
+} */
 
