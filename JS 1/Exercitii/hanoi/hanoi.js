@@ -1,4 +1,3 @@
-// import 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js'
 import 'http://unpkg.com/vue/dist/vue.js'
 import 'http://unpkg.com/vuex/dist/vuex.js'
 
