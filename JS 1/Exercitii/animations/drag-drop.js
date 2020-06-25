@@ -1,29 +1,29 @@
 document
-    .querySelector('#c1')
-    .addEventListener('drop', drop)
+     .querySelector('#c1')
+     .addEventListener('drop', drop)
 
 document
-    .querySelector('#c2')
-    .addEventListener('drop', drop)   
-    
-document
-    .querySelector('#c1')
-    .addEventListener('dragover', preventDefault)
+     .querySelector('#c2')
+     .addEventListener('drop', drop)
 
 document
-    .querySelector('#c2')
-    .addEventListener('dragover', preventDefault)
+     .querySelector('#c1')
+     .addEventListener('dragover', preventDefault)
 
 document
-    .querySelector('.dragged')
-    .addEventListener('dragstart', drag)
-    
+     .querySelector('#c2')
+     .addEventListener('dragover', preventDefault)     
+
+document
+     .querySelector('.dragged')
+     .addEventListener('dragstart', drag)
+
 function preventDefault(event) {
     event.preventDefault()
-} 
-  
+}
+
 function drag(event) {
-    event.dataTransfer.setData('emelentid', event.target.id)
+    event.dataTransfer.setData('elementid', event.target.id)
     event.dataTransfer.dropEffect = 'move'
     event.dataTransfer.effectAllowed = 'all'
 }

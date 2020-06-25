@@ -13,10 +13,11 @@
     height: 5em;
     width: 10em;
     background-color: darkorange;
-    border-radius: 1em;
+    border-radius: 10%;
     position: absolute;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
+    align-items: center;
 }
 #c1 {
     top: 10em;
