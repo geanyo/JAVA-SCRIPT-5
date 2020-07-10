@@ -1,35 +1,21 @@
-const express = require('express')
-const app = express()
+// es6 module
+// import express from 'express'
+// Node.js module
+const express = require('express') 
+
+const server = express()
 const port = 3000
-const serverUri = `http://localhost:${port}`
 
-const redis = require("redis");
-const client = redis.createClient();
+// cream serverul si setam portul
+const message = {message: 'Hello from my fisrt server'}
 
-function shortify(longUri) {
-    const shortKey = Math.random().toString(16).substr(2, 8)
-    client.set(shortKey, longUri, redis.print)
-    console.log(shortKey)
-    console.log(longUri)
-    const shortUri = serverUri + '/' + shortKey
-    return {shortUri}
-}
+// configuram rutele
+server.get('/hello', (request, response) => response.send(message))
+// putem face cate rute vrem
+server.get('/test', (request, response) => response.send({message: 'this is just another test'}))
 
-function getLongUri(shortKey, res) {
-    console.log(shortKey)
-    client.get(shortKey, (err, longUri) => res.send({longUri}))
-}
-
-app.use(express.json())
-
-app.post('/', (req, res) => res.send(shortify(req.body.longUri)))
-app.get('/:shortKey', (req, res) => getLongUri(req.params.shortKey, res))
-
-app.listen(
-    port, 
-    () => console.log(`Example app listening at http://localhost:${port}`)
+// pornim serverul
+server.listen(
+port,
+() => console.log(`Server started on http://localhost:${port}`)
 )
-
-{
-    "shortUri"= "http://localhost:3000/abc123"
-}
