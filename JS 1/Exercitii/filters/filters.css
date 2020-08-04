@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('utopia.jpg');
+    background-size: cover;
+    /* filter: blur(10px); */
+    animation-name: effect;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* @keyframes effect {
+    from {
+        filter: blur(0px);
+    }
+    to {
+        filter: blur(5px);
+    }
+} */
+/* @keyframes effect {
+    from {
+        filter: grayscale(100%);
+    }
+    to {
+        filter: grayscale(0%);
+    }
+} */
+/* @keyframes effect {
+    from {
+        filter: invert(0%);
+    }
+    to {
+        filter: invert(100%);
+    }
+} */
+/* @keyframes effect {
+    from {
+        filter: saturate(100%);
+    }
+    to {
+        filter: saturate(0%);
+    }
+} */
+@keyframes effect {
+    from {
+        filter: hue-rotate(0);
+    }
+    to {
+        filter: hue-rotate(180deg);
+    }
+}

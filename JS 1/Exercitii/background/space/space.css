@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* body {
+    background-image: url("rocket.png"), url("earth.png"), url("space.jpg");
+    background-size: auto, 20%, cover;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 30% 20%, center, 0 center;
+    height: 100vh;
+    animation-name: warp;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+} */
+body {
+    background-image: url("rocket.png"), url("earth.png"), url("space2.png");
+    background-size: auto, 20%, auto;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 30% 20%, center, 0 center;
+    height: 100vh;
+    animation-name: warp;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes warp {
+    /* from {} */
+    to {
+        /* background-position: 30% 20%, center, -1024px center;  -1024 SAU MULTIPLU DE DIMENSIUNEA TILE-ULUI*/ 
+        background-position: 30% 20%, center, -1024px center; 
+    }
+}

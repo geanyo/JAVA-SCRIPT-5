@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="mustache.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <span v-bind:class="myClass"></span> o alta varianta a ce e scris pe randul urmator------ V-BIND:CLASS       devine    :CLASS -->
+        <span :class="myClass"></span>
+        {{ message + ' Yes, I do' }}
+        <!-- {{ 'counter is ' + (counter + 1) }} -->
+    </div>
+</body>
+</html>

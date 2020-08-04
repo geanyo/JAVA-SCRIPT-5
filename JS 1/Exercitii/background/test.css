@@ -1,0 +1,23 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+div {
+    width: 700px;
+    height: 700px;
+    border: black solid 3px;
+    background-image: url("photographer.jpg");
+    background-size: cover;
+    /* background-position: center center; */
+    background-position: 50% center;
+    background-repeat: no-repeat;
+}
+

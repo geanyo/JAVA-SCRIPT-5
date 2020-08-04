@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h1::before {
+    content: "xxxx ";
+}
+h1::after {
+    content: " xxxx";
+}
+a {
+    text-decoration: none;
+    color: palevioletred;
+    font-size: 1.3em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+}
+a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: skyblue;
+    /* animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; */
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    width: 100%;
+    position: absolute;
+}
+a:hover::after {
+    transform: scaleX(1); 
+}
+/* @keyframes grow {
+    to {
+    width: 3.7em;  
+    } */
