@@ -1,23 +1,9 @@
-<<<<<<< HEAD
 div {
     background-color: orange;
-=======
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-div {
-    background-color: aqua;
->>>>>>> e322c9e5c05bf1e0ab2637c8b5119cc0db89a41d
     width: 20vh;
     height: 20vh;
     position: absolute;
     top: 20%;
     left: 50%;
     border-radius: 10px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e322c9e5c05bf1e0ab2637c8b5119cc0db89a41d
