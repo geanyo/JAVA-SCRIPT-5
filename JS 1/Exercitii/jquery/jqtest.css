@@ -1,9 +1,5 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 div {
+<<<<<<< HEAD
     background-color: paleturquoise;
     width: 10vh;
     height: 10vh;
@@ -25,6 +21,9 @@ div {
 }
 div {
     background-color: aqua;
+=======
+    background-color: orange;
+>>>>>>> 6c42e707b7d91b5aa08be05aac84e92c888e215b
     width: 20vh;
     height: 20vh;
     position: absolute;
